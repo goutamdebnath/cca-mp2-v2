@@ -26,8 +26,7 @@ def mywebserver():
 
     if request.method == 'POST':
         p = subprocess.Popen(["python", "stress_cpu.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        output, errors = p.communicate()
-        return str(output)
+        return str('process started successfully')
    
 
 if __name__ == '__main__':
